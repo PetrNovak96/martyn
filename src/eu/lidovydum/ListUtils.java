@@ -49,4 +49,14 @@ public class ListUtils {
         }
         return result;
     }
+
+    public static int[] insertAtIndex(int[] a, int element, int index) {
+        int[] result = new int[a.length + 1];
+        for (int i = 0; i < result.length; i++) {
+            if (i < index) result[i] = a[i];            // pokud je i mensi nez index, vloz a[i]
+            else if (i == index) result[i] = element;   // pokud je i = indexu, vloz element
+            else result[i] = a[i - 1];                  // pokud je vetsi nez index, vloz a[i-1]
+        }
+        return result;
+    }
 }
