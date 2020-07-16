@@ -40,4 +40,13 @@ public class ListUtils {
         return list;
         */
     }
+
+    public static int[] insertAsFirst(int[] a, int element) {
+        int[] result = new int[a.length + 1];
+        result[0] = element;
+        for (int i = 1; i < result.length; i++) {
+            result[i] = a[i - 1];
+        }
+        return result;
+    }
 }
